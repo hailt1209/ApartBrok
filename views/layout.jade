@@ -1,0 +1,208 @@
+doctype html
+html
+  head
+    title
+      = t('header_layout.page_title')
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet', type='text/css', media='all')
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='/javascripts/jquery-1.11.0.min.js')
+    // Custom Theme files
+    link(href='/stylesheets/style.css', rel='stylesheet', type='text/css', media='all')
+    link(rel='stylesheet', href='/stylesheets/flexslider.css', type='text/css', media='screen')
+    // Custom Theme files
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    script(type='application/x-javascript').
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }>
+    meta(name='keywords', content='le quoc huy')
+    // Google Fonts
+    link(href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    // start-smoth-scrolling
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/move-top.js')
+    script(type='text/javascript', src='/javascripts/easing.js')
+    script(type='text/javascript').
+      jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+      });
+      });
+
+    body
+    // //end-smoth-scrolling
+    // header start here
+    .header
+      .container
+        .header-main
+          .logo
+            a(href='index.html')
+              img(src='images/logo.png', alt='', title='')
+          .head-right
+            .top-nav
+              span.menu
+                img(src='images/icon.png', alt='')
+              ul.res
+                li
+                  a.active(href='index.html')= t('header_layout.menu_home')
+                li
+                  a(href='about.html')= t('header_layout.menu_about_us')
+                li
+                  a(href='blog.html')= t('header_layout.menu_blog')
+                li
+                  a(href='contact.html')= t('header_layout.menu_contact')
+                .clearfix  
+              // script-for-menu
+              script.
+                $( "span.menu" ).click(function() {
+                $( "ul.res" ).slideToggle( 300, function() {
+                // Animation complete.
+                });
+                });
+              // /script-for-menu
+            .social
+              ul
+                li
+                  a.fa(href='#')  
+                li
+                  a.tw(href='#')  
+                li
+                  a.p(href='#')  
+            //.search-box
+            //  #sb-search.sb-search
+            //    form
+            //      input#search.sb-search-input(placeholder='Search', type='search', name='search')
+            //      input.sb-search-submit(type='submit', value='')
+            //     span.sb-icon-search  
+            //.clearfix  
+            // search-scripts
+            // script(src='/javascripts/classie.js')
+            //script(src='/javascripts/uisearch.js')
+            //script.
+            //  new UISearch( document.getElementById( 'sb-search' ) );
+            // //search-scripts
+          .clearfix  
+    // header end here
+
+    block content
+
+    // footer start here
+    .footer
+      .container
+        .footer-main
+          .col-md-3.footer-grid
+            h3 About This Theme
+            p
+              | But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.account of the system.
+          .col-md-3.footer-grid
+            h3 Recents Posts
+            .ftr-sub-gd
+              .col-md-4.ftr-gd2-img
+                a(href='#')
+                  img(src='images/s1.jpg', alt='')
+              .col-md-8.ftr-gd2-text
+                a(href='#')
+                  h4 How to Have The Best Vacation
+                a(href='#')
+                  p Mar 3rd,2015
+              .clearfix  
+            .ftr-sub-gd
+              .col-md-4.ftr-gd2-img
+                a(href='#')
+                  img(src='images/s2.jpg', alt='')
+              .col-md-8.ftr-gd2-text
+                a(href='#')
+                  h4 How to Have The Best Vacation
+                a(href='#')
+                  p Mar 3rd,2015
+              .clearfix  
+            .ftr-sub-gd
+              .col-md-4.ftr-gd2-img
+                a(href='#')
+                  img(src='images/s3.jpg', alt='')
+              .col-md-8.ftr-gd2-text
+                a(href='#')
+                  h4 How to Have The Best Vacation
+                a(href='#')
+                  p Mar 3rd,2015
+              .clearfix  
+          .col-md-3.footer-grid
+            h3 Categories
+            ul
+              li
+                a(href='#') Featured
+              li
+                a(href='#') General
+              li
+                a(href='#') Lorem Ipsum
+              li
+                a(href='#') literature
+              li
+                a(href='#') Videos
+          .col-md-3.footer-grid
+            h3 Recent Projects
+            .ftr-gd4-img
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f1.jpg', alt='')
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f2.jpg', alt='')
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f3.jpg', alt='')
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f4.jpg', alt='')
+              .clearfix  
+            .ftr-gd4-img
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f5.jpg', alt='')
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f6.jpg', alt='')
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f7.jpg', alt='')
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f8.jpg', alt='')
+              .clearfix  
+            .ftr-gd4-img
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f9.jpg', alt='')
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f10.jpg', alt='')
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f11.jpg', alt='')
+              .col-md-3.ftr-gd4-1
+                a(href='#')
+                  img(src='images/f12.jpg', alt='')
+              .clearfix  
+          .clearfix  
+      .copyright
+        .container
+          .copy-main
+            .copy-left
+              p
+                | Design By
+                a(href='http://w3layouts.com/', target='-blank')  W3layouts
+            .copy-right
+              ul
+                li
+                  a.active(href='index.html')= t('header_layout.menu_home')
+                | /
+                li
+                  a(href='about.html')= t('header_layout.menu_about_us')
+                | /
+                li
+                  a(href='blog.html')= t('header_layout.menu_blog')
+                | /
+                li
+                  a(href='contact.html')= t('header_layout.menu_contact')
+    // footer end here
